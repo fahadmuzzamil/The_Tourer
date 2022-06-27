@@ -1,0 +1,740 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Vollkorn', serif;
+
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.center-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -----------------End-of-Reusable-Class-------------- */
+
+
+.main-container {
+    margin: 2.5rem;
+    background-color: #eee;
+    box-shadow: 1rem 1rem 1rem grey;
+    border-radius: 2rem;
+}
+
+/* ----------------------NavBar----------------- */
+
+.navbar-icon{
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    top: 4rem;
+    left: 5rem;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+
+.open-navbar-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+.line{
+    width: 80%;
+    height: .2rem;
+    background-color:  black;
+}
+
+.navbar-wrapper{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 3.5rem 5rem 3.5rem 3.5rem;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.change .navbar-wrapper{
+    opacity: 1;
+    z-index: 300;
+}
+.navbar{
+    background-color: royalblue;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.2)), url(/images/navbar-bg.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 2rem;
+}
+.close-navbar-icon{
+    position: absolute;
+    top: 5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 350;
+}
+.line-1, .line-2{
+    position: absolute;
+    top: 1.9rem;
+    right: .5rem;
+    left: .7rem;
+    width: 70%;
+    height: 0.3rem;
+    transform: rotate(35deg);
+}
+.line-2{
+    transform: rotate(-35deg);
+}
+
+.navbar-list{
+    display: flex;
+    text-align: center;
+    align-items: stretch;
+    height: 100%;
+    position: relative;
+    top: -110%;
+    transition: all 0.8s;
+}
+
+.change .navbar-list{
+    top: 0%;
+}
+
+.navbar-list a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.change .nav-link{
+    top: 0%;
+}
+.navbar-list a:hover{
+    opacity: 0.9;
+}
+
+.navbar-list a:nth-child(1){
+    background-color: purple;
+    border-radius: 2rem 0rem 0rem 2rem;
+}
+.navbar-list a:nth-child(2){
+    background-color:lightskyblue;
+}
+.navbar-list a:nth-child(3){
+    background-color: green;
+}
+.navbar-list a:nth-child(4){
+    background-color: royalblue;
+}
+.navbar-list a:nth-child(5){
+    background-color: orange;
+    border-radius: 0rem 2rem 2rem 0rem;
+}
+/* ----------------------Section-1-header----------------- */
+
+.header {
+    width: calc(100vw-5rem);
+    height: calc(92vh);
+    box-sizing: border-box;
+    background: linear-gradient(rgba(18, 113, 255, 0.5), rgba(18, 113, 255, 0.3)), url(/images/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    perspective: 100rem;
+    overflow: hidden;
+    background-color: #eee;
+    border-radius: 2rem 2rem 0rem 0rem;
+}
+
+.header-text {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    max-width: 55%;
+}
+
+.heading {
+    font-size: 7rem;
+    color: white;
+    text-shadow: 0.1rem 0.2rem grey;
+}
+
+.header-paragraph {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0.1rem 0.12rem grey;
+    color: white;
+    margin: auto;
+}
+
+
+.logo {
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+}
+
+.logo h1 {
+    display: flex;
+}
+
+.logo span {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: royalblue;
+    background-color: white;
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    margin: 0.1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0.2rem 0.3rem 0.3rem grey;
+}
+
+.logo h1 span:nth-child(1) {
+    animation: bounce-letter 4s 0.2s infinite;
+}
+
+.logo h1 span:nth-child(2) {
+    animation: bounce-letter 4s 0.4s infinite;
+}
+
+.logo h1 span:nth-child(3) {
+    animation: bounce-letter 4s 0.6s infinite;
+}
+
+.logo h1 span:nth-child(4) {
+    animation: bounce-letter 4s 1s infinite;
+    margin-left: 2rem;
+}
+
+.logo h1 span:nth-child(5) {
+    animation: bounce-letter 4s 1s infinite;
+}
+
+.logo h1 span:nth-child(6) {
+    animation: bounce-letter 4s 1.2s infinite;
+}
+
+.logo h1 span:nth-child(7) {
+    animation: bounce-letter 4s 1.4s infinite;
+}
+
+.logo h1 span:nth-child(8) {
+    animation: bounce-letter 4s 1.6s infinite;
+}
+
+.logo h1 span:nth-child(9) {
+    animation: bounce-letter 4s 1.8s infinite;
+}
+
+
+@keyframes bounce-letter {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+
+    25% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-70%);
+    }
+
+    75% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.header-img {
+    width: 35%;
+    animation: balloon-float 25s infinite;
+}
+
+@keyframes balloon-float {
+    0% {
+        transform: translateZ(30rem);
+    }
+
+    25% {
+        transform: translateZ(-100rem) translateX(10rem);
+    }
+
+    50% {
+        transform: translateZ(-200rem) translateX(100rem);
+    }
+
+    75% {
+        transform: translateZ(-100rem) translateZ(200rem);
+    }
+
+    100% {
+        transform: translateZ(30rem);
+    }
+
+}
+
+/* ----------------------End of Section-1------------------ */
+
+
+/* ----------------------\Section-2------------------ */
+.section-2 {
+    padding: 5rem 2rem 10rem 2rem;
+}
+
+.popular-tours-heading {
+    text-align: center;
+    font-size: 5rem;
+    color: royalblue;
+    text-shadow: 0.1rem 0.5rem 0.2rem #eee;
+    margin-bottom: 5rem;
+}
+
+.cards-conatiner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cards {
+    width: 32rem;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+    perspective: 100rem;
+    margin: 2rem;
+}
+
+.cards:hover {
+    transform: translateY(-1rem);
+    transition: all 1s;
+}
+
+.front-side {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    background-color: white;
+    z-index: 10;
+    opacity: 0.9;
+    transition: all 1s;
+}
+
+.change .front-side {
+    transform: translateZ(-10rem) translateX(4rem);
+    box-shadow: 0.2rem 0.2rem 0.2rem grey;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.tour-name {
+    font-size: 2.3rem;
+    color: white;
+    text-shadow: 0.12rem 0.12rem black;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    right: 1.5rem;
+}
+
+
+.card-list {
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0rem 3rem 0rem;
+}
+
+.card-list-item {
+    font-size: 1.8rem;
+    color: rgb(23, 40, 24);
+    margin-bottom: 2.5rem;
+    border-bottom: 0.2rem solid royalblue;
+    font-weight: boldd;
+}
+
+.back-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: royalblue;
+    box-shadow: 1.5rem 0.5rem 0.5rem gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    opacity: 0.5;
+    transform: translateZ(-10rem) translateX(4rem);
+    transition: all 1s;
+}
+
+.change .back-side {
+    transform: translateZ(0) translateX(0);
+    box-shadow: 0 0.5rem 2rem #aaa;
+    opacity: 0.9;
+}
+
+.navigation-btn {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgb(227, 218, 218);
+    color: rgb(62, 59, 59);
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 0.5rem 0.5rem;
+    letter-spacing: 0.2rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.tour-price {
+    font-size: 5rem;
+    color: white;
+    letter-spacing: 0.5rem;
+}
+
+.booking-btn {
+    font-size: 2rem;
+    border: none;
+    font-weight: 900;
+    padding: 1rem 3rem;
+    letter-spacing: 0.2rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    color: royalblue;
+    font-family: monospace;
+}
+
+/* ----------------------End of Section-2------------------ */
+
+/* .........................Section-3--------------------------- */
+
+.testimonials {
+    padding: 5rem 0rem 16rem 0rem;
+    position: relative;
+    /* margin-bottom: 5rem; */
+}
+
+.video-conatiner {
+    padding: 0rem 5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.video-conatiner video {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.reviews {
+    text-align: center;
+}
+
+.reviews h1 {
+    font-size: 4rem;
+    text-shadow: 0.1rem 0.1rem gray;
+    color: black;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.story-bg {
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 3rem;
+    margin: 5rem;
+    width: 70%;
+    box-shadow: 1rem 1rem 2rem grey;
+    transform: skewX(10deg);
+}
+
+.story {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.story-image {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+
+.story-text-box {
+    width: 75%;
+}
+
+.story-heading {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.story-paragraph {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    font-style: italic;
+    font-family: "Vollkorn" serif;
+}
+
+
+
+/* .........................End-of-Section-3--------------------------- */
+
+/* .........................Section-4--------------------------- */
+
+.contact {
+    text-align: center;
+    background: url(/images/contact-us-bg.png);
+    background-size: cover;
+    padding: 5rem 0rem 5rem 0rem;
+    box-sizing: border-box;
+    animation: contact-bg 15s infinite;
+}
+
+.contact h1 {
+    margin-bottom: 5rem;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0.2rem 0.1rem 0.1rem grey;
+}
+
+
+.form-container {
+    text-align: left;
+    width: 50rem;
+    margin: auto;
+    padding: 5rem 2rem;
+    opacity: 0.90;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    max-width: 100%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: blue;
+}
+
+input,label:hover{
+    cursor: pointer;
+}
+
+.all-forms {
+    padding: 1rem ; 
+    width: 100%;
+    background-color: rgb(223, 223, 223);
+    border-radius: .5rem;
+}
+
+
+.name {
+    width: 100%;
+}
+
+.email-phone-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1rem;
+    opacity: 1;
+}
+.email-phone-div input{
+    width: 100%;
+}
+
+textarea{
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    opacity: 0.7;
+    max-height: 5rem;
+    max-width: 100%;
+}
+textarea:hover{
+    cursor: pointer;
+}
+
+.button-form{
+    text-align: center;
+    width: 100%;
+    background-color: gray;
+    padding: 1rem 0rem;
+    transition: background 0.5s;
+}
+.button-form button{
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.button-form:hover{
+   cursor: pointer;
+   background-color: rgb(83, 80, 80);
+}
+
+@keyframes contact-bg{
+    0%{
+        background-color: rgba(158, 0, 0, 0.5);
+    }
+    25%{
+        background-color: rgba(5, 42, 135, 0.512);
+    }
+    50%{
+        background-color: rgba(1, 136, 15, 0.5);
+    }
+    75%{
+        background-color: rgba(115, 1, 135, 0.5);
+    }
+    100%{
+        background-color: rgba(11, 119, 197, 0.5);
+    }
+}
+
+/* ------------------End-of-section-4-------------------- */
+
+/* ------------------section-5-------------------- */
+.footer{
+    width: 100%;
+    height: 12rem;
+    padding: 3rem 1rem;
+    background-color: rgb(180, 174, 174);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    perspective: 100rem;
+    border-radius: 0rem 0rem 2rem 2rem;
+}
+
+.list-div ul{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8rem;
+    margin-bottom: 2.5rem;
+}
+.list-div li{
+    color: black;
+    font-size: 1.8rem;
+    font-weight: bold;
+     transition: all 0.8s;
+}
+
+.list-div li:hover{
+    color: white;
+    background-color: rgb(89, 86, 86);
+    padding: .5rem 1rem;
+    letter-spacing: 0.2rem;
+    border-radius: .5rem;
+    box-shadow: 0.2rem 0.2rem 1rem black;
+    transform: rotate(-10deg) skewX(-5deg) ;
+    cursor: pointer;
+}
+
+.copyrights{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: black;
+    transition: all 0.5s;
+}
+.copyrights:hover{
+    cursor: pointer;
+    padding: .5rem 1rem;
+    box-shadow: 0.2rem 0.2rem 1rem black;
+    transform:  skewX(-10deg) ;
+    cursor: pointer;
+    border-radius: 5rem;
+
+}
+/* ------------------End-of-section-5-------------------- */
