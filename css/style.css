@@ -83,7 +83,7 @@ html {
     background-color: royalblue;
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.2)), url(/images/navbar-bg.jpg) no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.2)), url(../images/navbar-bg.jpg) no-repeat center;
     background-size: cover;
     border-radius: 2rem;
 }
@@ -164,7 +164,7 @@ html {
     width: calc(100vw-5rem);
     height: calc(92vh);
     box-sizing: border-box;
-    background: linear-gradient(rgba(18, 113, 255, 0.5), rgba(18, 113, 255, 0.3)), url(/images/header-bg.jpg);
+    background: linear-gradient(rgba(18, 113, 255, 0.5), rgba(18, 113, 255, 0.3)), url(../images/header-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -552,7 +552,7 @@ html {
 
 .contact {
     text-align: center;
-    background: url(/images/contact-us-bg.png);
+    background: url(../images/contact-us-bg.png);
     background-size: cover;
     padding: 5rem 0rem 5rem 0rem;
     box-sizing: border-box;
